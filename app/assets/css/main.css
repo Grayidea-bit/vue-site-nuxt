@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+*{
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: #F2EBE5;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+
+#_nuxt {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@theme {
+  --color-beige: #F2EBE5;
+  --color-purple: #641295;
+  --color-pink: #9F496E;
+  --color-dark: #2B262D;
+
+  --animate-page-transition: page-transition 0.6s ease-in-out;
+
+  @keyframes page-transition {
+    0% {
+      opacity: 0;
+      backdrop-filter: blur(0);
+    }
+    25% {
+      opacity: 0.6;
+      backdrop-filter: blur(12px)
+    }
+    40% {
+      opacity: 1;
+      backdrop-filter: blur(18px)
+    }
+    60% {
+      opacity: 1;
+      backdrop-filter: blur(18px)
+    }
+    75% {
+      opacity: 0.5;
+      backdrop-filter: blur(9px)
+    }
+    100% {
+      opacity: 0;
+      backdrop-filter: blur(0);
+    }
+  }
+
+  @keyframes hover {
+    0% {
+      size-scale: 1;
+    }
+    100% {
+      opacity: 0;
+      backdrop-filter: blur(0);
+    }
+  }
+}
